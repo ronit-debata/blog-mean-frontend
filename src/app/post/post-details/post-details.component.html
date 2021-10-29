@@ -9,8 +9,8 @@
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title><h2>{{post.postTitle}}</h2></mat-card-title>
-        <p>Created by: {{post.postAuthor}}</p>
         <mat-card-subtitle>{{post.postDesc}}</mat-card-subtitle>
+        <mat-card-subtitle>Created by: {{post.postAuthor}}</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="{{post.postImgUrl}}" alt="{{post.postTitle}}" id="icard">
       <mat-card-content>
@@ -22,8 +22,8 @@
         </dl>
       </mat-card-content>
       <mat-card-actions>
-        <a mat-flat-button color="primary" [routerLink]="['/post/edit', post._id]"><mat-icon>edit</mat-icon></a>
-        <a mat-flat-button color="warn" (click)="deletePost(post._id)"><mat-icon>delete</mat-icon></a>
+        <a id="but1" mat-flat-button color="primary" [routerLink]="['/post/edit', post._id]"><mat-icon>edit</mat-icon></a>
+        <a id="but2" mat-flat-button color="warn" (click)="deletePost(post._id)"><mat-icon>delete</mat-icon></a>
       </mat-card-actions>
     </mat-card>
   </div>
